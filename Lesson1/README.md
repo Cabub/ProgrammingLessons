@@ -25,3 +25,27 @@ If you're an  [intractable](http://www.thefreedictionary.com/intractable) type, 
 ## Download this repository
 
 If you have git installed, you can use ``` git clone https://github.com/Cabub/ProgrammingLessons.git ``` to download the repository, otherwise, just download the .zip file and extract. If you're here to learn programming, I'm not going to help you with git. That should be its own course.
+
+## Syntax
+
+Don't worry, the first lesson is easy, just some basic syntax.
+
+### Hello world!
+
+Yes, it's cliché, but we're doing it anyway. Write this in a file named hello_world.py.
+```python
+print('Hello world!')
+```
+Now let's check to make sure it works.
+
+First you'll need the 'path' to the directory you saved that file in. Typically, you can find this in the address bar of your file manager. In Windows, it'll look like this: ``` C:\Users\User\Documents\ ```, on Mac or Linux it will look more like ``` /home/User/Documnts/ ```.
+
+Now open up a terminal. You can do this on Windows by running the program ``` cmd.exe ``` or on Mac with ``` Terminal ``` otherwise if you're running Linux and don't know how to open a terminal, what are you doing?
+
+Change your current directory to the path of the directory you saved hello_world.py in. To do this type ``` cd <path> ``` and press enter.
+
+Now you should be able to use the command ``` python hello_world.py ``` to run your program.
+
+If you saw ``` Hello world! ```, you did it! You officially wrote a computer program.
+
+I'll let you off with no tests for this lesson, since you had to install all that software. But next time, I'm going to make sure you accomplished what you set out to do!
