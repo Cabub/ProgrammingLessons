@@ -4,7 +4,7 @@
 
 #### Python
 
-The first thing you'll need is [Python](https://www.python.org/downloads/). Please don't use Python 2. I'll keep everything in this repo runnable in anything above 3.5, but in my opinion it would be a waste of time to limit you to the practices and limits a soon-to-be [deprecated](https://en.wikipedia.org/wiki/Deprecation) version of Python.
+The first thing you'll need is [Python](https://www.python.org/downloads/). Please don't use Python 2. I'll keep everything in this repo runnable in anything above 3.5, but in my opinion it would be a waste of time to limit you to the practices and limits of a soon-to-be [deprecated](https://en.wikipedia.org/wiki/Deprecation) version of Python.
 
 This isn't a course in how to install software on your chosen OS. If you can't figure that out (did you [try this](http://www.dummies.com/software/for-seniors-how-to-install-a-new-computer-program/)?) bookmark this and come back when you've got a greater handle on what you're doing here.
 
@@ -25,10 +25,6 @@ If you're an  [intractable](http://www.thefreedictionary.com/intractable) type, 
 ## Download this repository
 
 If you have git installed, you can use ``` git clone https://github.com/Cabub/ProgrammingLessons.git ``` to download the repository, otherwise, just download the .zip file and extract. If you're here to learn programming, I'm not going to help you with git. That should be its own course.
-
-## Syntax
-
-Don't worry, the first lesson is easy, just some basic syntax.
 
 ### Hello world!
 
