@@ -1,18 +1,31 @@
 import re
+import os
+import importlib
 regex = re.compile("'(.+)'")
+
+def check_type(mod, var, typ, val):
+    if ((type(mod.__dict__[var]) is typ) and
+        (val is None or val == mod.__dict__[var])):
+        type_r = regex.search(str(typ)).group(1)
+        print("type({}) is {}\na == {}".format(var,
+              type_r,
+             mod.__dict__[var] if type_r != 'str' else "'{}'".format(
+                mod.__dict__[var].replace("'",'\''))))
+        return True
+    elif type(mod.__dict__[var]) is not typ:
+        print("{} isn't appropriately typed.".format(var))
+    else:
+        print(("{} is the correct type, but is set to an " +
+               "inappropriate value").format(var))
+    return False
+
 try:
-    import datatypes as dt
-    def check_type(var, typ):
-        if type(dt.__dict__[var]) is typ:
-            type_r = regex.search(str(typ)).group(1)
-            print("{} is a {}".format(var, type_r))
-            return True
-        print("it seems {} isn't appropriately typed.".format(var))
-        return False
-    if all([check_type(a, b) for a, b in
-               [('a',str), ('b',int), ('c',float)]]):
+    dt = importlib.import_module('datatypes')
+    if all([check_type(dt, a, b, c) for a, b, c in
+               [('a', str, None), ('b', int, None), ('c', float, None),
+                ('d', int, None), ('e', float, None), ('f', int, int(dt.e))]]):
         print('good job, you passed datatypes.py!')
 except SyntaxError as e:
     print(("Your syntax isn't right on line {}, please remember " +
-          "to finish datatypes.py before running the grader")
-          .format(e.lineno))
+          "to finish {} and save before running the grader")
+          .format(e.lineno, os.path.split(e.filename)[1]))

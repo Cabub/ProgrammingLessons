@@ -3,7 +3,7 @@ I'll assign a to a string,
 you assign b to an int,
 and c to a float.
 '''
-
+# Set b to an int and c to a float
 a = "This is how you assign a string to a variable"
 b =
 c =
@@ -15,7 +15,7 @@ will automatically try to parse the number from
 the text. This means I can set d to an integer
 just by writing d = int('123'). You try it:
 """
-
+# Set d to a numeric string
 d =
 
 """ You can also convert back and forth between
@@ -29,6 +29,6 @@ and the next line will convert it to the string
 before finally casting it to an int (123). then
 it will assign this value to f.
 """
-
+# Set e to a float
 e =
 f = int(float(str(e)))
