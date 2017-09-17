@@ -85,10 +85,69 @@ In this directory, you'll find a file called ``` datatypes.py ```. I've taken th
 
 ## Operators
 
+Operators allow you manipulate and compare values in Python. Operators are usually unary (one operand) or binary (two operands).
+
 ### Arithmetic Operators
 
-Arithmetic operators are used to perform math operations. The operators available to use in Python are: Addition (+) adds two values together, Subtraction (-) subtracts the right operand by the left operand, Multiplication (\*) multiplies the right operand by the left operand, Division (/) divides the left operand by the right operand, Modulus (%) divides the left operand by the right operand and returns the remainder, Exponent (\*\*) calculates the exponential value, and Floor division (//) performs integer division
+Arithmetic operators are binary operators used to perform math operations. The operators available to use in Python are: Addition (+) adds two values together, Subtraction (-) subtracts the right operand by the left operand, Multiplication (\*) multiplies the right operand by the left operand, Division (/) divides the left operand by the right operand, Modulus (%) divides the left operand by the right operand and returns the remainder, Exponent (\*\*) calculates the exponential value, and Floor division (//) performs integer division.
 
-### Comparison operators
+```python
+1 + 1 == 2  # addition
+2 - 1 == 1  # subtraction
+2 * 6 == 12  # multiplication
+14 / 5 == 2.8  # division
+14 % 5 == 4  # modulus (remainder)
+14 // 5 == 2  # floor division (integer division)
+2 ** 4 == 16  # exponent (power)
+```
 
-Sometimes, you may need to ask your program to take two items and see if they match or if one is greater than, less than, and/or equal to another. The operators used for this are: == (equal to), =!(not equal to), >(greater than), <(less than), >=(greater than or equal to), <=(less than or equal to). Comparison operators always return a boolean result.
+### Apply and Assign Operators
+
+All of the basic Arithmetic operators can be combined with an equals sign to create an 'Apply and assign' operator. This is a special type of binary operator that takes a variable and a value, then applies the specified operaton to the variable, and saves the result. This overwrites the variable's value with the resulting value.
+
+```python
+a = 1
+a += 1   # a == 2
+a -= 1   # a == 1
+a *= 20  # a == 20
+a /= 5   # a == 5
+```
+
+### Comparison Operators
+
+Sometimes, you may need to ask your program to take two items and see if they match or if one is greater than, less than, and/or equal to another. The operators used for this are: ``` == ``` (equal to), ``` != ``` (not equal to), ``` > ``` (greater than), ``` < ``` (less than), ``` >= ``` (greater than or equal to), ``` <= ``` (less than or equal to). Comparison operators always return a boolean result.
+
+```python
+2 >= 1
+2 > 1
+2 < 3
+3 <= 3
+'3' != 'a'
+1 == 1
+```
+
+### Boolean Operators
+
+Boolean operators are operators that use boolean input and provide a boolean output. The two boolean operators you need to know in Python are ``` and ``` and ``` or ```. ``` and ``` returns ``` True ``` if and only if both the left and right operands are both true, otherwise, it returns ``` False ```. ``` or ``` returns ``` True ``` if either of the operands are true, and returns ``` False ``` only if both of the operands are false.
+
+```python
+a = True and False  # a == False
+a = False or True   # a == True
+a = True or True    # a == True
+a = True and True   # a == True
+a = False or False  # a == False
+```
+
+### Unary Operators
+
+Unary operators are operators with only one operand. A good example is the boolean operator ``` not ```. ``` not ``` returns the negated boolean value of the target expression.
+
+```python
+a = True
+b = not a  # b == False
+a = not a and b # a == False
+```
+
+## Requirements
+
+In this directory, you'll find a file called ``` operators.py ```. Please follow the instructions in the comments, and pass the grader before proceeding.
