@@ -7,8 +7,7 @@ def check_type(mod, var, typ, val):
     if ((type(mod.__dict__[var]) is typ) and
         (val is None or val == mod.__dict__[var])):
         type_r = regex.search(str(typ)).group(1)
-        print("type({}) is {}\na == {}".format(var,
-              type_r,
+        print("type({}) is {}\n{} == {}".format(var, type_r, var,
              mod.__dict__[var] if type_r != 'str' else "'{}'".format(
                 mod.__dict__[var].replace("'",'\''))))
         return True
@@ -23,7 +22,8 @@ try:
     dt = importlib.import_module('datatypes')
     if all([check_type(dt, a, b, c) for a, b, c in
                [('a', str, None), ('b', int, None), ('c', float, None),
-                ('d', int, None), ('e', float, None), ('f', int, int(dt.e))]]):
+                ('d', bool, None), ('e', int, None), ('f', float, None),
+                ('g', int, int(dt.f)), ('h', bool, bool(dt.g))]]):
         print('good job, you passed datatypes.py!')
 except SyntaxError as e:
     print(("Your syntax isn't right on line {}, please remember " +

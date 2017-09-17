@@ -4,7 +4,7 @@
 
 #### Python
 
-The first thing you'll need is [Python](https://www.python.org/downloads/). Please don't use Python 2. I'll keep everything in this repo runnable in anything above 3.5, but in my opinion it would be a waste of time to limit you to the practices and limits of a soon-to-be [deprecated](https://en.wikipedia.org/wiki/Deprecation) version of Python.
+The first thing you'll need is [Python](https://www.python.org/downloads/). Please don't use Python 2. I'll keep everything in this repo runnable in anything above 3.5, but in my opinion it would be a waste of time to limit you to the practices and limits of an outdated version of Python.
 
 This isn't a course in how to install software on your chosen OS. If you can't figure that out (did you [try this](http://www.dummies.com/software/for-seniors-how-to-install-a-new-computer-program/)?) bookmark this and come back when you've got a greater handle on what you're doing here.
 
@@ -34,9 +34,9 @@ print('Hello world!')
 ```
 Now let's check to make sure it works.
 
-First you'll need the 'path' to the directory you saved that file in. Typically, you can find this in the address bar of your file manager. In Windows, it'll look like this: ``` C:\Users\User\Documents\ ```, on Mac or Linux it will look more like ``` /home/User/Documnts/ ```.
+First you'll need the 'path' to the directory you saved that file in. Typically, you can find this in the address bar of your file manager. In Windows, it'll look like this: ``` C:\Users\<your username>\Documents\ ```, on Mac or Linux it will look more like ``` /home/<your username>/Documnts/ ```.
 
-Now open up a terminal. You can do this on Windows by running the program ``` cmd.exe ``` or on Mac with ``` Terminal ``` otherwise if you're running Linux and don't know how to open a terminal, what are you doing?
+Now open up a terminal. You can do this on Windows by running the program ``` cmd.exe ``` or on Mac with ``` Terminal ``` otherwise if you're running Linux and don't know how to open a terminal, I don't think I can help you.
 
 Change your current directory to the path of the directory you saved hello_world.py in. To do this type ``` cd <path> ``` and press enter.
 
