@@ -57,7 +57,7 @@ This will cause the string "This is a string" to be printed out.
 
 Arithmetic operators are used to perform math operations. The operators available to use in Python are: Addition (+) adds two values together, Subtraction (-) subtracts the right operand by the left operand, Multiplication (\*) multiplies the right operand by the left operand, Division (/) divides the left operand by the right operand, Modulus (%) divides the left operand by the right operand and returns the remainder, Exponent (\*\*) calculates the exponential value, and Floor division (//) performs integer division
 
-###Comparison operators
+### Comparison operators
 
 Sometimes, you may need to ask your program to take two items and see if they match or if one is greater than, less than, and/or equal to another. The operators used for this are: == (equal to), =!(not equal to), >(greater than), <(less than), >=(greater than or equal to), <=(less than or equal to)
 
