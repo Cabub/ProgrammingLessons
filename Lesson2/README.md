@@ -64,20 +64,19 @@ This will cause the string "This is a string" to be printed out.
 
 Back in my day, we had to be very careful about the datatypes we were using and converting between them. Nowadays Python takes care most of that for you, but you still need to be careful or you could be burned by bad typing. I'm sure we'll talk more about it later in the course, but for now, you should know that you can check the type of a variable by using the ``` type ``` function.
 ```python
-type('1') == str
-type(1) == int
-type(1.0) == float
-type(True) == bool
+type('1')  # == str  # '1' is a string
+type(1)    # == int  # 1 is an integer
+type(1.0)  # == float # 1.0 is a float
+type(True) # == bool # True is boolean
 ```
 You can also 'cast' variables or constants (a constant is just some data that doesn't change) into another data type by using it's 'constructor' (we'll get more into that later, just remember the terminology).
 ```python
-a = int(123.123)
-b = float(5)
-c = str(123)
-d = bool(1)
+a = int(123.123)  # a == 123   # assign a to 123.123 casted to an integer
+b = float(5)       # b == 5.0   # assign b to 5 casted to a float
+c = str(123)      # c == '123' # assign c to 123 casted to a string
+d = bool(1)       # d == True  # assign d to 1 casted to boolean
 ```
 After running the above code, a = ``` 123 ```, b = ``` 5.0 ```, c = ``` '123' ``` and d = ``` True ```.
-
 
 ## Requirements
 
@@ -92,13 +91,13 @@ Operators allow you manipulate and compare values in Python. Operators are usual
 Arithmetic operators are binary operators used to perform math operations. The operators available to use in Python are: Addition (+) adds two values together, Subtraction (-) subtracts the right operand by the left operand, Multiplication (\*) multiplies the right operand by the left operand, Division (/) divides the left operand by the right operand, Modulus (%) divides the left operand by the right operand and returns the remainder, Exponent (\*\*) calculates the exponential value, and Floor division (//) performs integer division.
 
 ```python
-1 + 1 == 2  # addition
-2 - 1 == 1  # subtraction
-2 * 6 == 12  # multiplication
-14 / 5 == 2.8  # division
-14 % 5 == 4  # modulus (remainder)
-14 // 5 == 2  # floor division (integer division)
-2 ** 4 == 16  # exponent (power)
+1 + 1   # == 2   # addition
+2 - 1   # == 1   # subtraction
+2 * 6   # == 12  # multiplication
+14 / 5  # == 2.8 # division
+14 % 5  # == 4   # modulus (remainder)
+14 // 5 # == 2   # floor division (integer division)
+2 ** 4  # == 16  # exponent (power)
 ```
 
 ### Apply and Assign Operators
@@ -106,11 +105,11 @@ Arithmetic operators are binary operators used to perform math operations. The o
 All of the basic Arithmetic operators can be combined with an equals sign to create an 'Apply and assign' operator. This is a special type of binary operator that takes a variable and a value, then applies the specified operaton to the variable, and saves the result. This overwrites the variable's value with the resulting value.
 
 ```python
-a = 1
-a += 1   # a == 2
-a -= 1   # a == 1
-a *= 20  # a == 20
-a /= 5   # a == 5
+a = 1    # assign 1 to a
+a += 1   # a == 2   # assign a + 1 to a
+a -= 1   # a == 1   # assign a - 1 to a
+a *= 20  # a == 20  # assign a * 20 to a
+a /= 5   # a == 5   # assign a / 5 to a
 ```
 
 ### Comparison Operators
@@ -143,9 +142,9 @@ a = False or False  # a == False
 Unary operators are operators with only one operand. A good example is the boolean operator ``` not ```. ``` not ``` returns the negated boolean value of the target expression.
 
 ```python
-a = True
-b = not a  # b == False
-a = not a and b # a == False
+a = True        # a == True   # assign True to a
+b = not a       # b == False  # assign not a to b
+a = not a and b # a == False  # assign (not a) and b to a
 ```
 
 ## Requirements
