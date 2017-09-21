@@ -59,13 +59,13 @@ else:
   print("not yet time")
 
 As you can see else is not indented because its not to be ran inside of the
-conditions that the variables match. It follows the same format except because its
+conditions that the variables match. It follows the same format as the IF statement except because its
 a broad statement it does not need an argument. It has its colon at the end and
 the following line is indented.
 
 Now lets say we did want something to happen if the if statement wasn't a match but
 it did require a specific argument. Lets say you wanted to be notified an hour
-before the time came. YOu would use an elif object and it would lose indentical
+before the time came. YOu would use an elif(ELSE IF) object and it would look indentical
 to the if part.
 
 if(varTimeNow == varTimeINeed):
