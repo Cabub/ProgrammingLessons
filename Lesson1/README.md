@@ -1,47 +1,85 @@
 # Lesson 1
 
+The first thing you'll need to do is set up a development environment. Your development environment is the set of programs, libraries, and tools you use to develop programs. For Python I typically use graphical text editor like [Atom](https://atom.io/) to write code and a shell like [IPython](https://ipython.org/) to test my work. For the purposes of this class however, we're going to install an IDE (Integrated Development Environment) because it has all the tools we need together in one place, and should have consistent results between users of different operating systems.
+
+For the purposes of this class, we'll be using PyCharm from JetBrains as our IDE. If you already have a preferred IDE, or would like to use a different development stack, you should be able to follow along through each of the lessons anyway.
+
 ## Setup
 
-#### Python
+#### PyCharm
 
-The first thing you'll need is [Python](https://www.python.org/downloads/). Please don't use Python 2. I'll keep everything in this repo runnable in anything above 3.5, but in my opinion it would be a waste of time to limit you to the practices and limits of an outdated version of Python.
+Depending on your operating system, setup will be different. I'll separate the instructions below:
 
-This isn't a course in how to install software on your chosen OS. If you can't figure that out (did you [try this](http://www.dummies.com/software/for-seniors-how-to-install-a-new-computer-program/)?) bookmark this and come back when you've got a greater handle on what you're doing here.
+###### Windows
 
-#### Text Editor
+For Windows, visit [PyCharm's download page](https://www.jetbrains.com/pycharm/download/#section=windows) and select the community edition (unless you want to pay for it). This will prompt a download, accept it. Then run the executable and follow through the on-screen instructions. Once you have it installed, proced to the next section.
 
-The text editor you use says a lot about you in programmer circles. Since you're just starting out, keep that in mind, but don't worry about it too much. Just know that if you tell someone you know how to program, and they ask you what text editor you are using, they're sizing you up.
+###### macOS
 
-You can use any text editor you want, but I'd suggest [Atom](https://atom.io/). It's very configurable, the official text editor of Github, and it runs on all popular operating systems. Also, there's a built-in markdown viewer, so which is what this file is written in, so it may make it easier to read.
+For macOS, visit [PyCharm's download page](https://www.jetbrains.com/pycharm/download/#section=mac) and select the community edition (unless you want to pay for it). This will prompt a download, accept it. Then run the executable and follow through the on-screen instructions. Once you have it installed, proced to the next section.
 
-If you're an  [intractable](http://www.thefreedictionary.com/intractable) type, first-of-all you're going to fit right in here. Second, I've provided a few links to decent graphical text editors for you to choose from. Just find one you like, no judgement here.
+###### Linux
 
-* [Atom](https://atom.io/)
-* [Notepad++](http://www.thefreedictionary.com/intractable)
-* [PyCharm](https://www.jetbrains.com/pycharm/)
-* [Visual Studio Code](https://code.visualstudio.com/)
-* [Sublime](http://www.sublimetext.com/)
+Installation on Linux is best solved through your distrobution's package manager. If you're using Ubuntu, or Linux Mint, this should work.
+```bash
+sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
+sudo apt-get update
+sudo apt-get install ubuntu-make
+umake ide pycharm
+```
 
 ## Download this repository
 
-If you have git installed, you can use ``` git clone https://github.com/Cabub/ProgrammingLessons.git ``` to download the repository, otherwise, just download the .zip file and extract. If you're here to learn programming, I'm not going to help you with git. That should be its own course.
+If you have git installed, you can use ``` git clone https://github.com/Cabub/ProgrammingLessons.git ``` to download the repository, otherwise, just download the .zip file and extract it in your documents folder.
 
 ### Hello world!
 
-Yes, it's cliché, but we're doing it anyway. Write this in a file named hello_world.py.
-```python
-print('Hello world!')
+Yes, it's cliché, but we're doing it anyway.
+
+Open up PyCharm, then click ``` Create New Project ```. In the ``` Location ``` instead of ``` untitled ``` write ``` HelloWorld ```. Make sure your interpreter is ``` python3.6 ```, then click ``` Create ```.
+# Lesson 1
+
+The first thing you'll need to do is set up a development environment. Your development environment is the set of programs, libraries, and tools you use to develop programs. For Python I typically use graphical text editor like [Atom](https://atom.io/) to write code and a shell like [IPython](https://ipython.org/) to test my work. For the purposes of this class however, we're going to install an IDE (Integrated Development Environment) because it has all the tools we need together in one place, and should have consistent results between users of different operating systems.
+
+For the purposes of this class, we'll be using PyCharm from JetBrains as our IDE. If you already have a preferred IDE, or would like to use a different development stack, you should be able to follow along through each of the lessons anyway.
+
+## Setup
+
+#### PyCharm
+
+Depending on your operating system, setup will be different. I'll separate the instructions below:
+
+###### Windows
+
+For Windows, visit [PyCharm's download page](https://www.jetbrains.com/pycharm/download/#section=windows) and select the community edition (unless you want to pay for it). This will prompt a download, accept it. Then run the executable and follow through the on-screen instructions. Once you have it installed, proced to the next section.
+
+###### macOS
+
+For macOS, visit [PyCharm's download page](https://www.jetbrains.com/pycharm/download/#section=mac) and select the community edition (unless you want to pay for it). This will prompt a download, accept it. Then run the executable and follow through the on-screen instructions. Once you have it installed, proced to the next section.
+
+###### Linux
+
+Installation on Linux is best solved through your distrobution's package manager. If you're using Ubuntu, or Linux Mint, this should work.
+```bash
+sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
+sudo apt-get update
+sudo apt-get install ubuntu-make
+umake ide pycharm
 ```
-Now let's check to make sure it works.
 
-First you'll need the 'path' to the directory you saved that file in. Typically, you can find this in the address bar of your file manager. In Windows, it'll look like this: ``` C:\Users\<your username>\Documents\ ```, on Mac or Linux it will look more like ``` /home/<your username>/Documnts/ ```.
+## Download this repository
 
-Now open up a terminal. You can do this on Windows by running the program ``` cmd.exe ``` or on Mac with ``` Terminal ``` otherwise if you're running Linux and don't know how to open a terminal, I don't think I can help you.
+If you have git installed, you can use ``` git clone https://github.com/Cabub/ProgrammingLessons.git ``` to download the repository, otherwise, just download the .zip file and extract it in your documents folder.
 
-Change your current directory to the path of the directory you saved hello_world.py in. To do this type ``` cd <path> ``` and press enter.
+### Hello world!
 
-Now you should be able to use the command ``` python hello_world.py ``` to run your program.
+Yes, it's cliché, but we're doing it anyway.
 
-If you saw ``` Hello world! ```, you did it! You officially wrote a computer program.
+Open up PyCharm, then click ``` Create New Project ```. In the ``` Location ``` instead of ``` untitled ``` write ``` HelloWorld ```. Make sure your interpreter is ``` python3.6 ```, then click ``` Create ```. Right click on the ``` HelloWorld ``` project in the left-hand bar, and click on ``` New ```, ``` Python File ```. Name it ``` HelloWorld ```.
 
-I'll let you off with no tests for this lesson, since you had to install all that software. But next time, I'm going to make sure you accomplished what you set out to do!
+You should now see a text editor in the center of your screen. Type the follwing into the text area:
+```python
+print('Hello World!')
+```
+
+Save the document, then on the menu bar click ``` Run ```, ``` Run ```, and select HelloWorld. Now an outbut bar should appear on the bottom of your screen with the words ``` Hello World! ```. Well done! You've just written your first program.
