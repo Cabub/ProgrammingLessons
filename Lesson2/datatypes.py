@@ -40,7 +40,6 @@ h = bool(g)
 
 """ Now that you're finished with datatypes.py,
 please run the grader to find out how you did.
-To do this, open up a terminal window, (as described
-in lesson 1), navigate to this directory using the cd
-command, and run the grader by running: python grader.py
+To do this, right click on grader.py, and click
+"Run 'grader'".
 """

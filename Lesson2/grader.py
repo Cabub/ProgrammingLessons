@@ -1,15 +1,15 @@
 import re
-import os
 import importlib
 regex = re.compile("'(.+)'")
 
-def check_type(mod, var, typ, val):
-    if ((type(mod.__dict__[var]) is typ) and
-        (val is None or val(mod.__dict__[var]))):
-        type_r = regex.search(str(typ)).group(1)
-        # print("type({}) is {}\n{} == {}".format(var, type_r, var,
-        #      mod.__dict__[var] if type_r != 'str' else "'{}'".format(
-        #         mod.__dict__[var].replace("'",'\''))))
+
+def check_type(mod, var, typ, test):
+    try:
+        x = mod.__dict__[var]
+    except Exception:
+        raise AttributeError("\tCannot find variable {}".format(var))
+    if ((type(x) is typ) and
+       (test is None or eval(test))):
         return True
     elif type(mod.__dict__[var]) is not typ:
         print("\t{} isn't appropriately typed.".format(var))
@@ -18,39 +18,50 @@ def check_type(mod, var, typ, val):
                "inappropriate value").format(var))
     return False
 
-try:
-    """
-    filename = 'datatypes.py'
-    dt = importlib.import_module('datatypes')
-    print('{}: '.format(filename))
-    if all([check_type(dt, a, b, c) for a, b, c in
-               [('a', str, None), ('b', int, None), ('c', float, None),
-                ('d', bool, None), ('e', int, None), ('f', float, None),
-                ('g', int, lambda x: x == int(dt.f)),
-                ('h', bool, lambda x: x == bool(dt.g))]]):
-        print('\tpassed!')
-    """
-    filename = 'operators.py'
-    op = importlib.import_module('operators')
-    print('{}'.format(filename))
-    if all([check_type(op, a, b, c) for a, b, c in
-                [('a', int, lambda x: x < 10 and x > op.b),
-                 ('b', int, lambda x: x < 10 and x < op.a),
-                 ('c', int, lambda x: x == op.a + op.b),
-                 ('d', float, lambda x: x == op.c / op.b),
-                 ('e', int, lambda x: x == op.a * op.a),
-                 ('f', int, lambda x: x == sum([op.a, op.b, op.c, op.e])),
-                 ('g', int, lambda x: x == (op.a + 2)*(op.b - op.c)),
-                 ('h', int, lambda x: x == 20),
-                 ('i', int, lambda x: x == 30),
-                 ('j', bool, lambda x: x == (not (not True))),
-                 ('k', bool, lambda x: x != False),
-                 ('n', bool, lambda x: x),
-                 ('o', bool, lambda x: x == True),
-                 ('p', bool, lambda x: x)
-                 ]]):
-        print('\tpassed!')
-except SyntaxError as e:
-    print(("Your syntax isn't right on line {}, please remember " +
-          "to finish {} and save before running the grader")
-          .format(e.lineno, filename))
+
+def grade_file(module_name, rules):
+    try:
+        filename = '{}.py'.format(module_name)
+        print('{}: '.format(filename))
+        mod = importlib.import_module(module_name)
+        if all([check_type(mod, a, b, c) for a, b, c in rules]):
+            print('\tpassed')
+    except SyntaxError as e:
+        print("\tYour syntax isn't right on line {}, please remember "
+              "to finish {} and save before running the grader"
+              .format(e.lineno, filename))
+    except (ValueError, TypeError) as e:
+        if len(e.args) > 0 and 'ellipsis' in e.args[0].lower():
+            print("\tIt looks like you haven't replaced all the ellipses yet. "
+                  "Please finish {} and save before running the grader."
+                  .format(filename))
+        else:
+            raise e
+
+
+answer_key = {
+    "datatypes": [('a', str, None), ('b', int, None), ('c', float, None),
+                  ('d', bool, None), ('e', int, None), ('f', float, None),
+                  ('g', int, "x == int(mod.f)"),
+                  ('h', bool, "x == bool(mod.g)")],
+    "operators": [('a', int, "x < 10 and x > mod.b"),
+                  ('b', int, "x < 10 and x < mod.a"),
+                  ('c', int, "x == mod.a + mod.b"),
+                  ('d', float, "x == mod.c / mod.b"),
+                  ('e', int, "x == mod.a * mod.a"),
+                  ('f', int, "x == sum([mod.a, mod.b, mod.c, mod.e])"),
+                  ('g', int, "x == (mod.a + 2)*(mod.b - mod.c)"),
+                  ('h', int, "x == 20"),
+                  ('i', int, "x == 30"),
+                  ('j', bool, "x == (not (not True))"),
+                  ('k', bool, "x != False"),
+                  ('n', bool, "x"),
+                  ('o', bool, "x == True"),
+                  ('p', bool, "x")]
+}
+
+file_order = ["datatypes", "operators"]
+
+
+for mod in file_order:
+    grade_file(mod, answer_key[mod])

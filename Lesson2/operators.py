@@ -12,17 +12,17 @@ b = 3
 """ Now that we have some variables set, lets
 do some math.
 """
-# Set c to the a plus b
-c = a + b
+# Set c to a plus b
+c = ...
 
 # Set d to c divided by b
-d = c / b
+d = ...
 
 # Set e to the value of a squared using the power operator (**)
-e = a ** 2
+e = ...
 
 # Set f to the sum of a, b, c and e
-f = a + b + c + e
+f = ...
 
 """ Arithmetic operations generally follow the
 order of operations, but for more complex expressions,
@@ -35,7 +35,7 @@ result we wanted. This causes a + b to be evaluated first,
 and the result to be multiplied by 2.
 """
 # Set g to the value of (a plus two) times (b minus c)
-g = (a + 2) * (b - c)
+g = ...
 
 """ Now lets use some Apply and Assign operators
 """
@@ -43,36 +43,35 @@ h = 10
 i = 61
 
 # Set h to h plus 10 using the += operator
-h += 10
+h += ...
 
 # Set i to i floor divided by 2 using the //= operator
-i //= 2
+i //= ...
 
 """ Let's try out the comparison operators now.
 """
 
 # Set j to the value of a greater than b
-j = a > b
+j = ...
 
 # Set k to the value of h not equal to i
-k = h != i
+k = ...
 
 """ Now we'll finish it off with the boolean operators
 """
 l = True
 m = False
 # Set n to not m
-n = not m
+n = ...
 
 # Set o to n and l
-o = n and l
+o = ...
 
 # Set p to o and m or not m (this will be evaluated left to right)
-p = o and m or not m
+p = ...
 
 """ Now that you're finished with datatypes.py,
 please run the grader to find out how you did.
-To do this, open up a terminal window, (as described
-in lesson 1), navigate to this directory using the cd
-command, and run the grader by running: python grader.py
+To do this, right click on grader.py, and click
+"Run 'grader'".
 """
