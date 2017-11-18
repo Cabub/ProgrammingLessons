@@ -150,3 +150,52 @@ a = not a and b # a == False  # assign (not a) and b to a
 ## Requirements
 
 In this directory, you'll find a file called ``` operators.py ```. Please follow the instructions in the comments, and pass the grader before proceeding.
+
+## Concepts
+
+ Next, we're going to focus on a few of the basics of Python syntax, and how to avoid common errors.
+
+### Syntax
+
+[Syntax](https://www.merriam-webster.com/dictionary/syntax) is the rules that we must follow in order for our code to be correctly interpreted. If try to run your code and see a syntax error, it means that some part of your code cannot be correctly interpreted.
+
+
+### Expressions
+
+An expression in a programing language is a section of code that gets evaluated to a single value. In the operators exercise, everything on the right side of each equals sign is an expression. 
+
+### Code Blocks
+
+Code is separated into sections called blocks. In Python, blocks are separated by indentation levels; in C or Java, code blocks are separated by curly braces. Code blocks can be nested, as with an if statement:
+
+```python
+print('about to enter a different code block')
+if True:
+    print('inside nested block')
+print("and now I'm back!")
+```  
+
+As you can see from the above code, the "flow of control" went from the bottom level for first statement, inside the 'if' block, then back to the bottom level. How is this any different from what we've done already? Let me show you by changing the code a bit:
+
+```python
+print('skipping code block...')
+if False:
+    print("oh no don't skip me!")
+    print("I really want to get executed!")
+    print("aww man...")
+print("now I'm here!")
+```
+
+If you ran the above code, you'd see: 
+```
+skipping code block...
+now I'm here!
+```
+because we didn't execute the code in the nested block. 
+
+###### Notes:
+* In Python, indentation levels must be a multiple of four. 
+
+# Summary
+
+In this lesson, you've learned about operators, data types, and some basic programming concepts. You may wish to keep the solved problems on your computer so that your can refer back to them. In any case, you're well on your way to learning Python! Congratulations!
