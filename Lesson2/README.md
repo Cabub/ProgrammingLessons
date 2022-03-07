@@ -157,7 +157,7 @@ In this directory, you'll find a file called ``` operators.py ```. Please follow
 
 ### Syntax
 
-[Syntax](https://www.merriam-webster.com/dictionary/syntax) is the rules that we must follow in order for our code to be correctly interpreted. If try to run your code and see a syntax error, it means that some part of your code cannot be correctly interpreted.
+[Syntax](https://www.merriam-webster.com/dictionary/syntax) is the set of rules that we must follow in order for our code to be correctly interpreted. If you try to run your code and see a syntax error, it means that some part of your code cannot be correctly interpreted by the computer, and must be changed before it will run.
 
 
 ### Expressions
